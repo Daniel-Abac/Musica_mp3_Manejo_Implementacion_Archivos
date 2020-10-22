@@ -24,7 +24,7 @@ import javax.swing.table.DefaultTableModel;
 public class Ruta extends javax.swing.JInternalFrame  {
     //Se inicializa la jList
     DefaultListModel listModel;
-    ArrayList<Cancion> nueva;
+    ArrayList<Canciones> nueva;
     public Ruta() throws IOException {
         initComponents();
         listModel = new DefaultListModel();
@@ -39,7 +39,7 @@ public class Ruta extends javax.swing.JInternalFrame  {
 
             File file = chooser.getSelectedFile(); 
             fullPath = file.getAbsolutePath(); 
-            jTextField1.setText(fullPath);
+            jTextFieldRuta.setText(fullPath);
         } else {
             System.out.println(" ");
         }

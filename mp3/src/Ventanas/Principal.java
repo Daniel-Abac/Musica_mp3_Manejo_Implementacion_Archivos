@@ -89,9 +89,13 @@ public class Principal extends javax.swing.JFrame {
 
     private void jCheckBoxMenuItemAgregarRutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemAgregarRutaActionPerformed
         // TODO add your handling code here:
-        Ruta open = new Ruta();
-        jDesktopPaneEscritorio.add(open);
-        open.show();
+        try {
+            Ruta open = new Ruta();
+            jDesktopPaneEscritorio.add(open);
+            open.show();
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jCheckBoxMenuItemAgregarRutaActionPerformed
 
     /**
