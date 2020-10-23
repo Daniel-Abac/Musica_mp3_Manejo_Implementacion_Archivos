@@ -51,6 +51,8 @@ public class Canciones {
         this.urlDisquera = urlDisquera;
         this.biografia = biografia;
     }
+    
+    //getter y setter para cada objeto
 
     public String getDisquera() {
         return disquera;
