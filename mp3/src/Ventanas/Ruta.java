@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Douglas
+ * @author Daniel
  */
 public class Ruta extends javax.swing.JInternalFrame  {
     //Se inicializa la jList
