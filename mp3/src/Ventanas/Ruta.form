@@ -28,7 +28,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabelArchivosImportados" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabelRuta" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
@@ -36,34 +36,34 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jLabelDisquera" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldDisquera" max="32767" attributes="0"/>
                           <Component id="jLabelArtista" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldArtista" alignment="0" pref="214" max="32767" attributes="0"/>
+                          <Component id="jTextFieldArtista" alignment="0" pref="463" max="32767" attributes="0"/>
                           <Component id="jLabelAlbum" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldAlbum" alignment="0" pref="214" max="32767" attributes="0"/>
+                          <Component id="jTextFieldAlbum" alignment="0" pref="463" max="32767" attributes="0"/>
                           <Component id="jLabelAño" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldAño" alignment="0" pref="214" max="32767" attributes="0"/>
+                          <Component id="jTextFieldAño" alignment="0" pref="463" max="32767" attributes="0"/>
                           <Component id="jLabelGenero" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldGenero" alignment="0" pref="214" max="32767" attributes="0"/>
+                          <Component id="jTextFieldGenero" alignment="0" pref="463" max="32767" attributes="0"/>
                           <Component id="jLabelDireccion" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldDireccion" alignment="0" pref="214" max="32767" attributes="0"/>
+                          <Component id="jTextFieldDireccion" alignment="0" pref="463" max="32767" attributes="0"/>
                           <Component id="jLabelURL_Autor" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldURL_Autor" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabelURL_Disquera" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelBio_Comen" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldURL_Disquera" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextFieldBio_Comen" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextFieldDisquera" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jTextFieldRuta" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jTextFieldRuta" alignment="0" min="-2" pref="748" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="278" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="389" max="32767" attributes="0"/>
                   <Component id="jInternalFrame1" min="-2" pref="0" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="278" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="389" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -114,17 +114,17 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabelBio_Comen" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextFieldBio_Comen" max="32767" attributes="0"/>
+                      <Component id="jTextFieldBio_Comen" min="-2" pref="73" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane2" min="-2" pref="545" max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="329" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="302" max="32767" attributes="0"/>
                   <Component id="jInternalFrame1" min="-2" pref="0" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="330" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="303" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>

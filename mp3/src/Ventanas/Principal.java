@@ -8,6 +8,7 @@ package Ventanas;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 /**
  *
  * @author Daniel
@@ -19,6 +20,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -34,8 +36,6 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuAgregar = new javax.swing.JMenu();
         jCheckBoxMenuItemAgregarRuta = new javax.swing.JCheckBoxMenuItem();
-        jMenuVerArchivos = new javax.swing.JMenu();
-        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,11 +43,11 @@ public class Principal extends javax.swing.JFrame {
         jDesktopPaneEscritorio.setLayout(jDesktopPaneEscritorioLayout);
         jDesktopPaneEscritorioLayout.setHorizontalGroup(
             jDesktopPaneEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 382, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         jDesktopPaneEscritorioLayout.setVerticalGroup(
             jDesktopPaneEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 178, Short.MAX_VALUE)
+            .addGap(0, 738, Short.MAX_VALUE)
         );
 
         jMenuAgregar.setText("Agregar");
@@ -63,25 +63,17 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuAgregar);
 
-        jMenuVerArchivos.setText("Ver Archivos");
-
-        jCheckBoxMenuItem2.setSelected(true);
-        jCheckBoxMenuItem2.setText("jCheckBoxMenuItem2");
-        jMenuVerArchivos.add(jCheckBoxMenuItem2);
-
-        jMenuBar1.add(jMenuVerArchivos);
-
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPaneEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jDesktopPaneEscritorio)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPaneEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jDesktopPaneEscritorio)
         );
 
         pack();
@@ -134,12 +126,10 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemAgregarRuta;
     private javax.swing.JDesktopPane jDesktopPaneEscritorio;
     private javax.swing.JMenu jMenuAgregar;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu jMenuVerArchivos;
     // End of variables declaration//GEN-END:variables
 }
 

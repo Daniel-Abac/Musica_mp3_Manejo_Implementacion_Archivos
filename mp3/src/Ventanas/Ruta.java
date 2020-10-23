@@ -43,7 +43,7 @@ public class Ruta extends javax.swing.JInternalFrame  {
         } else {
             System.out.println(" ");
         }
-        BuscarArchivos prueba = new BuscarArchivos();
+        Buscar prueba = new Buscar();
         File folder = new File(fullPath);
         prueba.listarFicherosPorCarpeta(folder);
         nueva = prueba.getListaCanciones();
@@ -238,7 +238,7 @@ public class Ruta extends javax.swing.JInternalFrame  {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelArchivosImportados)
                     .addComponent(jLabelRuta)
                     .addGroup(layout.createSequentialGroup()
@@ -246,30 +246,30 @@ public class Ruta extends javax.swing.JInternalFrame  {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabelDisquera)
-                            .addComponent(jTextFieldDisquera)
                             .addComponent(jLabelArtista)
-                            .addComponent(jTextFieldArtista, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .addComponent(jTextFieldArtista, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
                             .addComponent(jLabelAlbum)
-                            .addComponent(jTextFieldAlbum, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .addComponent(jTextFieldAlbum, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
                             .addComponent(jLabelAño)
-                            .addComponent(jTextFieldAño, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .addComponent(jTextFieldAño, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
                             .addComponent(jLabelGenero)
-                            .addComponent(jTextFieldGenero, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .addComponent(jTextFieldGenero, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
                             .addComponent(jLabelDireccion)
-                            .addComponent(jTextFieldDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .addComponent(jTextFieldDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
                             .addComponent(jLabelURL_Autor)
                             .addComponent(jTextFieldURL_Autor)
                             .addComponent(jLabelURL_Disquera)
                             .addComponent(jLabelBio_Comen)
                             .addComponent(jTextFieldURL_Disquera)
-                            .addComponent(jTextFieldBio_Comen)))
-                    .addComponent(jTextFieldRuta))
-                .addContainerGap(37, Short.MAX_VALUE))
+                            .addComponent(jTextFieldBio_Comen)
+                            .addComponent(jTextFieldDisquera)))
+                    .addComponent(jTextFieldRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 278, Short.MAX_VALUE)
+                    .addGap(0, 389, Short.MAX_VALUE)
                     .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 278, Short.MAX_VALUE)))
+                    .addGap(0, 389, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -317,14 +317,14 @@ public class Ruta extends javax.swing.JInternalFrame  {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabelBio_Comen)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldBio_Comen))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextFieldBio_Comen, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 329, Short.MAX_VALUE)
+                    .addGap(0, 302, Short.MAX_VALUE)
                     .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 330, Short.MAX_VALUE)))
+                    .addGap(0, 303, Short.MAX_VALUE)))
         );
 
         pack();
