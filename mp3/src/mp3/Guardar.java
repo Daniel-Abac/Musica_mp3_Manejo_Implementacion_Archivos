@@ -31,26 +31,28 @@ public class Guardar {
         
         
     }
-    //Se utiliza para obtener el arreglo desde otras clases.
+    
+    
+    
     public ArrayList getCanciones(){
        ListaRegistros = new ArrayList<Canciones>();
        return ListaRegistros;
     }
-    //Se utiliza para obtener el arreglo desde otras clases.
+    
+    
     public ArrayList getIndCan(){
        IndiceRegistros = new ArrayList<IndiceCanciones>();
        return IndiceRegistros;
     }
     
-    //Añade la canción a la lista y también al indice.
+    
     public void agregarCancion(Canciones cancion, String nombreC){
         this.ListaRegistros.add(cancion);
         this.IndiceRegistros.add(new IndiceCanciones(nombreC,0));
     }
     
-    //Primero escribe la posición del índice.
-    //Comienza a escribir el archivo, escribiendo primero la longitud de cada cadena y luego escribiendo la misma.
-    //De igual manera se escribe el índice.
+    
+    
     public void guardar(){
         try {            
             RandomAccessFile archivo = new RandomAccessFile(nombreDeArchivo,"rw");
