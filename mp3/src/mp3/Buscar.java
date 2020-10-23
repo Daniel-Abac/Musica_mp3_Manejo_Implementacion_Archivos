@@ -24,8 +24,6 @@ public class Buscar {
     
     Canciones r = new Canciones();
     
-    //Se asegura que no exista el archivo biblioteca para evitar que se sobreescriban los datos.
-    //De no existir entonces se crea.
     public Buscar() throws FileNotFoundException, IOException {
         String a="";
         this.archivo = new File("biblioteca.data");
@@ -41,19 +39,14 @@ public class Buscar {
             almacenDeRegistros = new Guardar("biblioteca.data");
         }
     }
-    //Obtiene el arrayList de canciones para poder acceder a los datos.
+    
+    
     public ArrayList getListaCanciones(){
         ArrayList<Canciones> canciones = almacenDeRegistros.getListaRegistros();
         return canciones;
     }
     
-    //Un intento de editar por medio de ArrayLists
-    public void Edit(String nombre, String Disquera, String Autor, String Album, String Año, String Genero, String DireccionC, String URLAutor, String URLDisquera, String Biografia){
-        almacenDeRegistros.Editar(nombre, Disquera, Autor, Album, Año, Genero, DireccionC, URLAutor, URLDisquera, Biografia);
-    }
     
-    
-    //Compara unicamente para saber a que le corresponde cada etiqueta para mostrar en consola.
     public String tag(String tag){
         if ("TALB".equals(tag)){
             return "Álbum: ";
@@ -83,8 +76,8 @@ public class Buscar {
             return null;
         }     
     }
-    //Es muy similar al anterior, pero con la diferencia que este almacena la información en el arrayList para
-    // preparar que se pueda escribir en el archivo.
+    
+    
     public String AssignFromTag(String tag, String data){
         if ("TALB".equals(tag)){
             r.setAlbum(data);
@@ -132,8 +125,7 @@ public class Buscar {
         }     
     }
         
-    //Funcion recursiva encoontrada en internet para poder recorrer las carpetas y poder obtener únicamente archivos .mp3
-    //Dentro de ella se busca la información en las etiquetas ID3.
+    
     public void listarFicherosPorCarpeta(final File carpeta) throws FileNotFoundException, IOException  {
         
         for(final File ficheroEntrada : carpeta.listFiles()) {

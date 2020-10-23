@@ -38,6 +38,10 @@ public class Principal extends javax.swing.JFrame {
         jCheckBoxMenuItemAgregarRuta = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Principal");
+
+        jDesktopPaneEscritorio.setToolTipText("");
+        jDesktopPaneEscritorio.setName(""); // NOI18N
 
         javax.swing.GroupLayout jDesktopPaneEscritorioLayout = new javax.swing.GroupLayout(jDesktopPaneEscritorio);
         jDesktopPaneEscritorio.setLayout(jDesktopPaneEscritorioLayout);
@@ -49,6 +53,8 @@ public class Principal extends javax.swing.JFrame {
             jDesktopPaneEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 738, Short.MAX_VALUE)
         );
+
+        jMenuBar1.setToolTipText("Principal");
 
         jMenuAgregar.setText("Agregar");
 

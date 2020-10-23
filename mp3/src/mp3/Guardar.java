@@ -114,23 +114,6 @@ public class Guardar {
         }
     }
     
-    //Parte del editar que cambia los valores en el array.
-    public void Editar(String nombre, String Disquera, String Autor, String Album, String Año, String Genero, String DireccionC, String URLAutor, String URLDisquera, String Biografia){
-        for (int i=0; i<ListaRegistros.size(); i++){
-            if(nombre == null ? ListaRegistros.get(i).getNombreC() == null : nombre.equals(ListaRegistros.get(i).getNombreC())){
-                ListaRegistros.get(i).setAlbum(Album);
-                ListaRegistros.get(i).setArtista(Autor);
-                ListaRegistros.get(i).setDisquera(Disquera);
-                ListaRegistros.get(i).setAño(Año);
-                ListaRegistros.get(i).setGenero(Genero);
-                ListaRegistros.get(i).setDireccionC(DireccionC);
-                ListaRegistros.get(i).setUrlAutor(URLAutor);
-                ListaRegistros.get(i).setUrlDisquera(URLDisquera);
-                ListaRegistros.get(i).setBiografia(Biografia);
-            }
-            
-        }
-    }
     
     public String getNombreDeArchivo() {
         return nombreDeArchivo;
