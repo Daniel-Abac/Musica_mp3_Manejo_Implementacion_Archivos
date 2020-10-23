@@ -10,7 +10,7 @@ package mp3;
  * @author Daniel
  */
 public class IndiceCanciones implements Comparable<IndiceCanciones> {
-    //Se declara lo necesario y la posicion en int pues se han dejado 4 bytes para ella.
+    
     private String nombreC;
     private int posicion;
 
