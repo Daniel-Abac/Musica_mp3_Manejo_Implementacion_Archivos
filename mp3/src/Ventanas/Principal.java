@@ -17,6 +17,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import mp3.Buscar;
 /**
  *
  * @author Daniel
@@ -33,15 +34,19 @@ public class Principal extends javax.swing.JFrame {
     
     
     public void getData() throws FileNotFoundException, IOException {
-       jTable1.getTableHeader().setFont(new Font("Arial", 1, 13));
-        // cambia el fondo del encabezado de la tabla
-        jTable1.getTableHeader().setBackground(Color.WHITE);
-        // cambia el color de la letra del encabezado de la tabla
         jTable1.getTableHeader().setForeground(Color.BLACK);
         modelo = new DefaultTableModel();
         modelo.addColumn("Cancion");
         modelo.addColumn("Artista");
         modelo.addColumn("Album");
+        modelo.addColumn("Genero");
+        modelo.addColumn("Disquera");
+        modelo.addColumn("Año");
+        modelo.addColumn("Direccion");
+        modelo.addColumn("Duracion");
+        modelo.addColumn("URL Autor");
+        modelo.addColumn("URL Disquera");
+        modelo.addColumn("Biografia");
         RandomAccessFile lectura = new RandomAccessFile("canciones.data", "rw");
         short punteroIndice = lectura.readShort();
         lectura.seek(punteroIndice);
@@ -87,7 +92,7 @@ public class Principal extends javax.swing.JFrame {
         JFileChooser jf = new JFileChooser();
         jf.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         jf.showSaveDialog(null);
-        LectorArchivos lee = new LectorArchivos(jf.getSelectedFile().getAbsolutePath());
+        Buscar lee = new Buscar(jf.getSelectedFile().getAbsolutePath());
         lee.SaveInformation();
     }
 
@@ -106,6 +111,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButtonVer_Editar = new javax.swing.JButton();
         jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel3 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -115,31 +121,36 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Lista De Canciones");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Cancion", "Artista", "Album", "Genero", "Disquera", "Año", "Direccion", "Duracion", "URL Autor", "URL Disquera", "Biografia"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 660, 230));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 1040, 230));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Ver o Editar");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, -1, -1));
+        jLabel2.setText("Abri la carpeta de musica");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 330, -1, -1));
 
-        jButtonVer_Editar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/floppy-disk .png"))); // NOI18N
+        jButtonVer_Editar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/edit.png"))); // NOI18N
         jButtonVer_Editar.setBorderPainted(false);
         jButtonVer_Editar.setContentAreaFilled(false);
         jButtonVer_Editar.addActionListener(new java.awt.event.ActionListener() {
@@ -147,19 +158,28 @@ public class Principal extends javax.swing.JFrame {
                 jButtonVer_EditarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonVer_Editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, 40, -1));
+        getContentPane().add(jButtonVer_Editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 350, 40, -1));
 
-        jToggleButton1.setText("jToggleButton1");
+        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/folder.png"))); // NOI18N
+        jToggleButton1.setBorderPainted(false);
+        jToggleButton1.setContentAreaFilled(false);
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 180, 80, -1));
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 350, 40, 40));
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Ver o Editar");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 330, -1, -1));
 
         Fondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/17041.jpg"))); // NOI18N
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 370));
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -228,6 +248,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonVer_Editar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JToggleButton jToggleButton1;
